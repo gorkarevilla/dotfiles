@@ -1,8 +1,6 @@
 [user]
 	name = Gorka Revilla
 	email = gorkarevilla@gmail.com
-[push]
-	default = simple
 [core]
 	edit = vim
 [merge]
