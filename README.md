@@ -23,13 +23,15 @@ useful.
 ## Install
 
 Clone this repository in a location such as `~/.dotfiles`. Then, enter
-the just cloned repository and start stowing the packages that you want.
+the just cloned repository and start stowing the packages that you want
+or you can stow all of the packages with stowall.
 
     git clone git://github.com/gorkarevilla/dotfiles ~/.dotfiles
     cd ~/.dotfiles
     stow zsh
     stow openbox
     stow tmux
+    stowall
 
 Note that `stow zsh` works because there is a directory named `zsh` at
 `~/.dotfiles` and because the parent directory for `~/.dotfiles/` is 
