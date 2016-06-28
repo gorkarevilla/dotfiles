@@ -1,52 +1,99 @@
-" All system-wide defaults are set in $VIMRUNTIME/debian.vim and sourced by
-" the call to :runtime you can find below.  If you wish to change any of those
-" settings, you should do it in this file (/etc/vim/vimrc), since debian.vim
-" will be overwritten everytime an upgrade of the vim packages is performed.
-" It is recommended to make changes after sourcing debian.vim since it alters
-" the value of the 'compatible' option.
+" Gorka Revilla's vimrc based on https://github.com/danirod/vimrc/ 
 
-" This line should not be removed as it ensures that various options are
-" properly set to work with the Vim-related packages available in Debian.
-runtime! debian.vim
+" AUTHOR: Gorka Revilla <gorkarevilla@gmail.com> 
 
-" Uncomment the next line to make Vim more Vi-compatible
-" NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
-" options, so any other options should be set AFTER setting 'compatible'.
-"set compatible
+" TABLE OF CONTENTS:
+" 1. Generic settings
+" 2. Vim-Plug plugins
+" 3. File settings
+" 4. Specific filetype settings
+" 5. Colors and UI
+" 6. Maps and functions
 
-" Vim5 and later versions support syntax highlighting. Uncommenting the next
-" line enables syntax highlighting by default.
-syntax on
 
-" If using a dark background within the editing area and syntax highlighting
-" turn on this option as well
-"set background=dark
+" ===================
+" 1. GENERIC SETTINGS
+" ===================
+set nocompatible " disable vi compatibility mode
+set history=1000 " increase history size
+runtime! debian.vim " ensures debian options works properly
 
-" Uncomment the following to have Vim jump to the last position when
-" reopening a file
-"if has("autocmd")
-"  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-"endif
 
-" Uncomment the following to have Vim load indentation rules and plugins
-" according to the detected filetype.
-"if has("autocmd")
-"  filetype plugin indent on
-"endif
+" =================
+" 2. VIM-PLUG PLUGINS
+" =================
 
-" The following are commented out as they cause vim to behave a lot
-" differently from regular Vi. They are highly recommended though.
-"set showcmd		" Show (partial) command in status line.
-"set showmatch		" Show matching brackets.
-"set ignorecase		" Do case insensitive matching
-"set smartcase		" Do smart case matching
-"set incsearch		" Incremental search
-"set autowrite		" Automatically save before commands like :next and :make
-"set hidden		" Hide buffers when they are abandoned
-"set mouse=a		" Enable mouse usage (all modes)
 
-" Source a global configuration file if available
-if filereadable("/etc/vim/vimrc.local")
-  source /etc/vim/vimrc.local
+
+" ================
+" 3. FILE SETTINGS
+" ================
+
+" 70s are over and swap files are part of the past.
+" If you need to backup something, use Git, for God's sake.
+set noswapfile
+set nobackup
+
+" Modify indenting settings
+set autoindent              " autoindent always ON.
+set expandtab               " expand tabs
+set shiftwidth=4            " spaces for autoindenting
+set softtabstop=4           " remove a full pseudo-TAB when i press <BS>
+
+" Modify some other settings about files
+set encoding=utf-8          " always use unicode (god damnit, windows)
+set backspace=indent,eol,start " backspace always works on insert mode
+
+
+" =============================
+" 4. SPECIFIC FILETYPE SETTINGS
+" =============================
+
+
+
+" ================
+" 5. COLORS AND UI
+" ================
+
+" Are we supporting colors?
+if &t_Co > 2 || has("gui_running")
+   syntax on
+   set colorcolumn=80
 endif
 
+" Are we supporting a full color pallete?
+if &t_Co >= 256 || has("gui_running")
+    try
+        color Tomorrow-Night-Bright
+    catch /^Vim\%((\a\+)\)\=:E185/
+    endtry
+endif
+
+" Identify trailing spaces
+if &t_Co > 2 || has("gui_running")
+    " We have color. Colorize those bastards!
+    highlight ExtraWhitespace ctermbg=red guibg=red
+    match ExtraWhitespace /\s\+$/
+else
+    " Fallback to listchars method.
+    set listchars=trail:~
+    set list
+endif
+
+set fillchars+=vert:\   " Remove unpleasant pipes from vertical splits
+                        " Sauce on this: http://stackoverflow.com/a/9001540
+
+set showmode            " always show which more are we in
+set laststatus=2        " always show statusbar
+set wildmenu            " enable visual wildmenu
+
+set nowrap              " don't wrap long lines
+set number              " show line numbers
+" set relativenumber      " show numbers as relative by default
+" set cursorline          " highlight line where the cursor is
+" set cursorcolumn        " highlight column where the cursor is
+set showmatch           " higlight matching parentheses and brackets
+
+" =====================
+" 6. MAPS AND FUNCTIONS
+" =====================
