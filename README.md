@@ -25,7 +25,7 @@ useful.
 Clone this repository in a location such as `~/.dotfiles`. Then, enter
 the just cloned repository and start stowing the packages that you want.
 
-    git clone git://github.com/danirod/dotfiles ~/.dotfiles
+    git clone git://github.com/gorkarevilla/dotfiles ~/.dotfiles
     cd ~/.dotfiles
     stow zsh
     stow openbox
