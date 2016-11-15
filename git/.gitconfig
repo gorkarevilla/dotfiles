@@ -3,6 +3,7 @@
 	email = gorkarevilla@gmail.com
 [core]
 	edit = vim
+        editor = vim
 [merge]
 	tool = vimdiff
 
@@ -28,3 +29,5 @@
     	added = yellow
     	changed = green
     	untracked = cyan
+[alias]
+	grafico = log --oneline --decorate --all --graph
