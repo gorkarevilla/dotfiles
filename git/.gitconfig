@@ -31,3 +31,5 @@
     	untracked = cyan
 [alias]
 	grafico = log --oneline --decorate --all --graph
+[push]
+	default = simple
