@@ -115,3 +115,6 @@ fi
 # Prompts de ramuh
 
 export PS1="\[$(tput bold)\]\[\033[38;5;62m\][\[$(tput sgr0)\]\[\033[38;5;37m\]\t\[$(tput sgr0)\]\[\033[38;5;39m\]\[$(tput sgr0)\]\[\033[38;5;62m\]]\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;112m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;30m\]\h\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]:\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;160m\]\w\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]>\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;2m\]\\$\[$(tput sgr0)\] "
+
+# Alias ramuh
+alias MUSS='cd /media/DATOS/Dropbox/Gorka/MUSS' 
