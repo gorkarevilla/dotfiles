@@ -2,7 +2,6 @@
 	name = Gorka Revilla
 	email = gorkarevilla@gmail.com
 [core]
-	edit = vim
         editor = vim
 [merge]
 	tool = vimdiff
