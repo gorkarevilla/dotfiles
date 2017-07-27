@@ -5,6 +5,8 @@
         editor = vim
 [merge]
 	tool = vimdiff
+[diff]
+        tool = vimdiff
 
 # The following code is not mine.
 # Taken from http://www.kunday.com/post/29594688306/git-config-hacks
@@ -29,6 +31,7 @@
     	changed = green
     	untracked = cyan
 [alias]
-	grafico = log --oneline --decorate --all --graph
+	grafico2 = log --oneline --decorate --all --graph
+        grafico = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 [push]
 	default = simple

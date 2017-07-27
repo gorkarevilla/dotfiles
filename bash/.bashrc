@@ -117,4 +117,6 @@ fi
 export PS1="\[$(tput bold)\]\[\033[38;5;62m\][\[$(tput sgr0)\]\[\033[38;5;37m\]\t\[$(tput sgr0)\]\[\033[38;5;39m\]\[$(tput sgr0)\]\[\033[38;5;62m\]]\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;112m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;30m\]\h\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]:\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;160m\]\w\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]>\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;2m\]\\$\[$(tput sgr0)\] "
 
 # Alias ramuh
-alias MUSS='cd /media/DATOS/Dropbox/Gorka/MUSS' 
+alias MUSS='cd /media/DATOS/Dropbox/Gorka/MUSS'
+alias target-path6='cd /home/cxb0119/workspace/P5P6QA/path6 && source ../target-path6/venv-acceptance/bin/activate'
+alias target-baikal='cd /home/cxb0119/workspace/baikal/test/acceptance/src && source /home/cxb0119/ENVS/target-baikal/bin/activate'
