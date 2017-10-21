@@ -2,3 +2,4 @@
 stow bash
 stow git
 stow vim
+stow zsh
