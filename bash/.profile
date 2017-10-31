@@ -21,6 +21,11 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# If .vault.txt exists, load variables from there
+if [ -f "$HOME/.vault.txt" ]; then
+    . "$HOME/.vault.txt"
+fi
+
 # add python binaries to the path
 PATH=$PATH:~/.local/bin
 
