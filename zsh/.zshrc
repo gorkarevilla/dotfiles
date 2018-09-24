@@ -53,7 +53,7 @@ POWERLEVEL9K_CUSTOM_WIFI_SIGNAL_BACKGROUND="235"
 
 #POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator host dir_writable dir vcs)
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host dir_writable dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time background_jobs ssh status time virtualenv)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time background_jobs ssh status time virtualenv kubecontext)
 
 #POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh context root_indicator time_joined dir_joined dir_writable_joined vcs)
 #POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs anaconda pyenv virtualenv rbenv rvm nodeenv nvm time)
@@ -215,6 +215,7 @@ zplug "plugins/tmux", from:oh-my-zsh
 # Gorka
 zplug "plugins/python", from:oh-my-zsh
 zplug "plugins/virtualenv", from:oh-my-zsh
+
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -424,3 +425,17 @@ bindkey "^[[1;5D" backward-word
 [[ -f ~/.zshrc.alias ]] && source ~/.zshrc.alias
 
 # vim: ft=zsh
+
+# =============================================================================
+#                       Alias Python Virtual Environments
+# =============================================================================
+alias target-baikal='source ~/ENV/baikal/bin/activate'
+alias target-toolium='source ~/ENV/toolium/bin/activate'
+alias target-core='source ~/ENV/baikal-core/bin/activate'
+alias target-adapters='source ~/ENV/baikal-adapters/bin/activate'
+
+
+# =============================================================================
+#                       Load Profile
+# =============================================================================
+source ~/.profile

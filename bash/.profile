@@ -28,6 +28,3 @@ fi
 
 # add python binaries to the path
 PATH=$PATH:~/.local/bin
-
-#ALIAS
-alias target-baikal='cd /home/cxb0119/workspace/baikal/test/acceptance/adapters && source /home/cxb0119/ENV/baikal/bin/activate'
