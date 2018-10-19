@@ -285,9 +285,10 @@ setopt extended_glob
 # Directory coloring
 if [[ $OSTYPE = (darwin|freebsd)* ]]; then
 	# Prefer GNU version, since it respects dircolors.
-	alias ls='() { $(whence -p gls) -Ctr --file-type --color=auto $@ }'
+	#alias ls='() { $(whence -p gls) -Ctr --file-type --color=auto $@ }'
+	alias ls='ls -GFh'
 	export CLICOLOR="YES" # Equivalent to passing -G to ls.
-	export LSCOLORS="exgxdHdHcxaHaHhBhDeaec"
+	export LSCOLORS="ExFxBxDxCxegedabagacad"
 else
 	alias ls='() { $(whence -p ls) -Ctr --file-type --color=auto $@ }'
 fi
