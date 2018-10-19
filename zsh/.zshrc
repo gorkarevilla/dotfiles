@@ -215,6 +215,8 @@ zplug "plugins/tmux", from:oh-my-zsh
 # Gorka
 zplug "plugins/python", from:oh-my-zsh
 zplug "plugins/virtualenv", from:oh-my-zsh
+zplug "plugins/kubectl", from:oh-my-zsh
+zplug "plugins/kops", from:oh-my-zsh
 
 
 # Install plugins if there are plugins that have not been installed
