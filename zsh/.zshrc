@@ -434,7 +434,6 @@ bindkey "^[[1;5D" backward-word
 # =============================================================================
 alias target-baikal='source ~/ENV/baikal/bin/activate'
 alias target-toolium='source ~/ENV/toolium/bin/activate'
-alias target-core='source ~/ENV/baikal-core/bin/activate'
 alias target-adapters='source ~/ENV/baikal-adapters/bin/activate'
 
 
