@@ -218,7 +218,6 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "plugins/archlinux", from:oh-my-zsh
 zplug "plugins/dnf", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/go", from:oh-my-zsh
 zplug "plugins/golang", from:oh-my-zsh
 zplug "plugins/nmap", from:oh-my-zsh
 zplug "plugins/sudo", from:oh-my-zsh
