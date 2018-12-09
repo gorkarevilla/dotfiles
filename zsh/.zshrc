@@ -90,7 +90,7 @@ POWERLEVEL9K_TIME_FORMAT="%D{\uf017 %T}" #  15:29:33
 POWERLEVEL9K_TIME_FOREGROUND="cyan"
 POWERLEVEL9K_TIME_BACKGROUND="235"
 
-POWERLEVEL9K_VCS_GIT_GITHUB_ICON=""
+POWERLEVEL9K_VCS_GIT_GITHUB_ICON="\uf408" # 
 POWERLEVEL9K_VCS_GIT_BITBUCKET_ICON=""
 POWERLEVEL9K_VCS_GIT_GITLAB_ICON=""
 POWERLEVEL9K_VCS_GIT_ICON=""
@@ -117,7 +117,18 @@ POWERLEVEL9K_HOST_LOCAL_FOREGROUND="cyan"
 POWERLEVEL9K_HOST_REMOTE_BACKGROUND="235"
 POWERLEVEL9K_HOST_REMOTE_FOREGROUND="cyan"
 
-POWERLEVEL9K_HOST_ICON="\uF109" # 
+POWERLEVEL9K_KUBECONTEXT_BACKGROUND="purple"
+POWERLEVEL9K_KUBECONTEXT_FOREGROUND="white"
+
+POWERLEVEL9K_VIRTUALENV_BACKGROUND="white"
+POWERLEVEL9K_VIRTUALENV_FOREGROUND="020"
+
+if [[ $OSTYPE = (darwin|freebsd)* ]]; then
+    POWERLEVEL9K_HOST_ICON="\uF302" # 
+else
+    POWERLEVEL9K_HOST_ICON="\uF31b" # 
+fi
+
 POWERLEVEL9K_HOST_ICON_FOREGROUND="red"
 POWERLEVEL9K_HOST_ICON_BACKGROUND="black"
 POWERLEVEL9K_SSH_ICON="\uF489"  # 
@@ -189,7 +200,7 @@ source ~/.zplug/init.zsh
 #zplug "b4b4r07/enhancd", use:init.sh
 zplug "b4b4r07/enhancd", use:enhancd.sh
 #zplug "b4b4r07/zsh-vimode-visual", defer:3
-zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme, at:next
+zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme, at:master
 #zplug "knu/zsh-manydots-magic", use:manydots-magic, defer:2
 zplug "seebi/dircolors-solarized", ignore:"*", as:plugin
 zplug "zsh-users/zsh-autosuggestions", at:develop
