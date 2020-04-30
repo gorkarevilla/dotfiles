@@ -120,3 +120,9 @@ export PS1="\[$(tput bold)\]\[\033[38;5;62m\][\[$(tput sgr0)\]\[\033[38;5;37m\]\
 alias MUSS='cd /media/DATOS/Dropbox/Gorka/MUSS'
 alias target-path6='cd /home/cxb0119/workspace/P5P6QA/path6 && source ../target-path6/venv-acceptance/bin/activate'
 alias target-baikal='cd /home/cxb0119/workspace/baikal/test/acceptance/adapters && source /home/cxb0119/ENVS/target-baikal/bin/activate'
+
+# Secrets
+[ -f ~/.vault.txt ] && source ~/.vault.txt
+
+# added by travis gem
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh

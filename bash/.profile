@@ -28,3 +28,6 @@ fi
 
 # add python binaries to the path
 PATH=$PATH:~/.local/bin
+
+[ -d ~/.cargo.bin ] && export PATH="$HOME/.cargo/bin:$PATH"
+

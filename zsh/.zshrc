@@ -451,3 +451,6 @@ alias target-adapters='source ~/ENV/baikal-adapters/bin/activate'
 #                       Load Profile
 # =============================================================================
 source ~/.profile
+
+# added by travis gem
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
