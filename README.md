@@ -39,6 +39,8 @@ $HOME. If you are cloning this repository into a different location you will
 need to change the target directory or you will get these dotfiles linked
 at wrong locations.
 
+You also need a nerd font for the zsh. For example this one: [Meslo LG M Nerd Font](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/M/Regular/complete/Meslo%20LG%20M%20Regular%20Nerd%20Font%20Complete.ttf)
+
 ## Packages
 
 Most of the packages have the name of the application they are used by, such
