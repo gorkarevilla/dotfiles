@@ -443,9 +443,6 @@ bindkey "^[[1;5D" backward-word
 # =============================================================================
 #                       Alias Python Virtual Environments
 # =============================================================================
-alias target-baikal='source ~/ENV/baikal/bin/activate'
-alias target-toolium='source ~/ENV/toolium/bin/activate'
-alias target-adapters='source ~/ENV/baikal-adapters/bin/activate'
 
 
 # =============================================================================
