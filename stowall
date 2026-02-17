@@ -9,4 +9,3 @@ stow bash
 stow git
 stow vim
 stow zsh
-stow p10k.zsh
