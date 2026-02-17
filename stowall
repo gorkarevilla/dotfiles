@@ -3,8 +3,10 @@ mv ~/.profile ~/.profile.back 2>/dev/null || true
 mv ~/.bashrc ~/.bashrc.back 2>/dev/null || true
 mv ~/.vimrc ~/.vimrc.back 2>/dev/null || true
 mv ~/.zshrc ~/.zshrc.back 2>/dev/null || true
+mv ~/.p10k.zsh ~/.p10k.zsh.back 2>/dev/null || true
 mv ~/.gitconfig ~/.gitconfig.back 2>/dev/null || true
 stow bash
 stow git
 stow vim
 stow zsh
+stow p10k.zsh
