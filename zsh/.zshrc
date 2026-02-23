@@ -76,7 +76,6 @@ source ~/.zplug/init.zsh
 #zplug "b4b4r07/enhancd", use:init.sh
 zplug "b4b4r07/enhancd", use:enhancd.sh
 #zplug "b4b4r07/zsh-vimode-visual", defer:3
-# Using powerlevel10k (backward compatible with powerlevel9k settings)
 zplug romkatv/powerlevel10k, as:theme, depth:1
 #zplug "knu/zsh-manydots-magic", use:manydots-magic, defer:2
 zplug "seebi/dircolors-solarized", ignore:"*", as:plugin
